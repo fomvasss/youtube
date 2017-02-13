@@ -1,0 +1,26 @@
+{
+    "name": "fomvasss/youtube",
+    "description": "Package for generate IFrame with youtube-link",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Company",
+            "name": "WebWest",
+            "homepage": "http://web-west.net.ua"
+        },
+        {
+            "role": "Developer",
+            "name": "Fomin Vasyl",
+            "email": "fomin.vasil@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fomvasss\\Youtube\\": "src"
+        }
+    }
+}
