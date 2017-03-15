@@ -4,7 +4,7 @@
 
 - Creating and testing package
 
-## 1.1 (2016-03-15)
+## 1.1 (2017-03-15)
 
 - Add Bootstrap responsive embed for settings ration video
 - Add changelog.md ($this :))

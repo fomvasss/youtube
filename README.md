@@ -31,7 +31,7 @@ Edit file `config/youtube.php`, set:
 
 # Using
 
-##Using facades `Youtube`
+## Using facades `Youtube`
 ```
 use Fomvasss\Youtube\Facades\Youtube;
 ```
@@ -53,7 +53,7 @@ Youtube::iFrame($link, ['rel'=> 0, 'autoplay'=>1, 'controls'=>1, 'showinfo'=>1, 
 ```
 If are you not set some parameters, it well have default values (with config youtube.php):
 
-##Using blade directive in template`@youtube()`
+## Using blade directive in template`@youtube()`
 ```
 @youtube("https://www.youtube.com/watch?v=Dxk47dya8_k")
 ```
@@ -68,7 +68,7 @@ Also you can set more parameters in array:
 @youtube('https://www.youtube.com/watch?v=Dxk47dya8_k', ['width'=>720, 'height'=>460,])
 ```
 
-##Using Bootstrap responsive container
+## Using Bootstrap responsive container
 If in config/youtube.php sett `'bootstrap-responsive-embed' => true,` or array parameters is set `'bootstrap-responsive-embed' => true` then we give next:   
 ```
 <div class="embed-responsive embed-responsive-16by9">
@@ -78,9 +78,9 @@ If in config/youtube.php sett `'bootstrap-responsive-embed' => true,` or array p
 Then the parameters `height` & `weight` are not using (ignoring)
 You also can use `bootstrap-ratio` parameters. Available next value ratio: 1by1 | 4by3 | 16by9 | 21by9
 
-##Using helper-function `youtube_iframe()`
+## Using helper-function `youtube_iframe()`
 youtube_iframe('https://www.youtube.com/watch?v=Dxk47dya8_k');
 
-##Other method and API are back here:
+## Other method and API are back here:
 - https://developers.google.com/youtube/player_parameters?hl=ru
 - http://yournet.kz/blog/php/vstavka-video-iz-youtube-po-ssylke-php
