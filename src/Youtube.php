@@ -41,17 +41,31 @@ class Youtube
         $height = $options['height'];
         $frameborder = $options['frameborder'];
 
+        $bootstrap_respons = $options['bootstrap-responsive-embed'];
+        $bootstrap_ratio = $options = $options['bootstrap-ratio'];
+
         $videoID = $this->getYoutubeVideoID($link);
 
-        if ($videoID != false) {
-            return '<iframe width="'.$width.
-                '" height="'.$height.
-                '" src="https://www.youtube.com/embed/'.$videoID.
+        if ($videoID) {
+
+            if ($bootstrap_respons) {
+                $htmlRatio = 'class="embed-responsive-item"';
+            } else {
+                $htmlRatio = 'width="'.$width.'" height="'.$height.'"';
+            }
+
+            $html = '<iframe '. $htmlRatio .
+                ' src="https://www.youtube.com/embed/'.$videoID.
                 '?rel='.$rel.'&amp;autoplay='.$autoplay.
                 '&amp;controls='.$controls.
                 '&amp;showinfo='.$showinfo.
                 '" frameborder="'.$frameborder.
                 '"></iframe>';
+
+            if ($bootstrap_respons) {
+                $html = '<div class="embed-responsive embed-responsive-'.$bootstrap_ratio.'">'.$html.'</div>';
+            }
+            return $html;
         }
         return false;
     }

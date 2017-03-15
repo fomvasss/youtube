@@ -23,4 +23,8 @@ return [
 
     'frameborder' => 0,
 
+    'bootstrap-responsive-embed' => false,
+
+    'bootstrap-ratio' => '16by9',
+
 ];

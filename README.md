@@ -26,6 +26,9 @@ Edit file `config/youtube.php`, set:
 - 'height' => 360,      #height video
 - 'frameborder' => 0,   #border on player
 
+- 'bootstrap-responsive-embed' => false,    #add bootstrap container with class "embed-responsive"
+- 'bootstrap-ratio' => '16by9',             #set default ratio 1by1 | 4by3 | 16by9 | 21by9
+
 # Using
 
 ##Using facades `Youtube`
@@ -64,6 +67,17 @@ Also you can set more parameters in array:
 ```
 @youtube('https://www.youtube.com/watch?v=Dxk47dya8_k', ['width'=>720, 'height'=>460,])
 ```
+
+##Using Bootstrap responsive container
+If in config/youtube.php sett `'bootstrap-responsive-embed' => true,` or array parameters is set `'bootstrap-responsive-embed' => true` then we give next:   
+```
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+```
+Then the parameters `height` & `weight` are not using (ignoring)
+You also can use `bootstrap-ratio` parameters. Available next value ratio: 1by1 | 4by3 | 16by9 | 21by9
+
 ##Using helper-function `youtube_iframe()`
 youtube_iframe('https://www.youtube.com/watch?v=Dxk47dya8_k');
 
