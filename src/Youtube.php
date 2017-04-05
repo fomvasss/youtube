@@ -35,6 +35,7 @@ class Youtube
 
         $rel = $options['rel'];
         $autoplay = $options['autoplay'];
+        $loop = $options['loop'];
         $controls = $options['controls'];
         $showinfo = $options['showinfo'];
         $width = $options['width'];
@@ -53,10 +54,17 @@ class Youtube
             } else {
                 $htmlRatio = 'width="'.$width.'" height="'.$height.'"';
             }
+            $playlist = null;
+            if ($loop) {
+                $playlist = '&amp;playlist='.$videoID; //TODO playlist (for loop one video)
+            }
 
             $html = '<iframe '. $htmlRatio .
                 ' src="https://www.youtube.com/embed/'.$videoID.
-                '?rel='.$rel.'&amp;autoplay='.$autoplay.
+                '?rel='.$rel.
+                '&amp;autoplay='.$autoplay.
+                '&amp;loop='.$loop.
+                $playlist.
                 '&amp;controls='.$controls.
                 '&amp;showinfo='.$showinfo.
                 '" frameborder="'.$frameborder.

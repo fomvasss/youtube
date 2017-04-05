@@ -15,6 +15,8 @@ return [
 
     'controls' => 1,
 
+    'loop' => 0,
+
     'showinfo' => 1,
 
     'width' => 640,
