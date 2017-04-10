@@ -13,6 +13,10 @@
 
 - Update documentation
  
- ## 1.2.0 (2017-04-05)
+## 1.2.0 (2017-04-05)
  
  - Added repeat video option (config `loop`)
+ 
+## 1.2.1 (2017-04-10)
+
+ - Update require PHP >=5.6.0
