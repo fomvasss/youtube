@@ -90,6 +90,9 @@ class Youtube
         if (preg_match('@embed/([\\w\\-]*)@i', $url, $matches)) {
             return $matches[1];
         }
+        if (preg_match('@youtu.be/([\\w\\-]*)@i', $url, $matches)) {
+            return $matches[1];
+        }
         if (preg_match('@([\\w\\-]*)@i', $url, $matches)) {
             return $matches[1];
         }

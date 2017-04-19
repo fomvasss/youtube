@@ -20,3 +20,7 @@
 ## 1.2.1 (2017-04-10)
 
  - Update require PHP >=5.6.0
+ 
+## 1.2.2 (2017-04-19)
+
+ - Added support "Share" link: https://youtu.be/...
