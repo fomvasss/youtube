@@ -9,15 +9,15 @@ Package for generate IFrame with youtube-link
 ```bash
 composer require "fomvasss/youtube"
 ```
-register the service provider and aliases in config/app.php:
+**For Laravel < 5.5** register the service provider and aliases in config/app.php:
 ```php
   Fomvasss\Youtube\YoutubeServiceProvider::class,
 ```
-Then publish assets with 
+
+Publish config:
 ```bash
 php artisan vendor:publish --provider="Fomvasss\Youtube\YoutubeServiceProvider" --tag="config"
 ```
-This will add the file config/youtube.php
 
 ## Config  
 
